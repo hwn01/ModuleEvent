@@ -1,5 +1,14 @@
 apply plugin: 'java-library'
 apply plugin: 'java'
+buildscript {
+    repositories {
+            mavenCentral() // jcenter() 也可以
+    }
+
+    dependencies {
+            classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
